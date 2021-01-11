@@ -86,7 +86,7 @@ for image in image_list:
     card_ids.append(30000 + star2rarity[star] * 1000 + chara_id)
     card_file_names_all.append(image)
 # 边框缓存
-frame_names = ['superrare.png', 'rare.png', 'normal.png']
+frame_names = ['superiorsuperrare.png', 'rare.png', 'normal.png']
 frames = {}
 frames_aplha = {}
 for frame_name in frame_names:
