@@ -20,7 +20,7 @@ try:
     gadget_star = R.img('priconne/gadget/star.png').open()
     gadget_star_dis = R.img('priconne/gadget/star_disabled.png').open()
     gadget_star_pink = R.img('priconne/gadget/star_pink.png').open()
-    unknown_chara_icon = R.img(f'priconne/unit/icon_unit_{UNKNOWN}31.png').open()
+    unknown_chara_icon = R.img(f'priconne/blhx/icon_unit_{UNKNOWN}31.png').open()
 except Exception as e:
     logger.exception(e)
 
@@ -120,17 +120,17 @@ class Chara:
     @property
     def icon(self):
         star = '3' if 1 <= self.star <= 5 else '6'
-        res = R.img(f'priconne/unit/icon_unit_{self.id}{star}1.png')
+        res = R.img(f'priconne/blhx/icon_unit_{self.id}{star}1.png')
         if not res.exist:
-            res = R.img(f'priconne/unit/icon_unit_{self.id}31.png')
+            res = R.img(f'priconne/blhx/icon_unit_{self.id}31.png')
         if not res.exist:
-            res = R.img(f'priconne/unit/icon_unit_{self.id}11.png')
+            res = R.img(f'priconne/blhx/icon_unit_{self.id}11.png')
         if not res.exist:
-            res = R.img(f'priconne/unit/icon_unit_{self.id}31.png')
+            res = R.img(f'priconne/blhx/icon_unit_{self.id}31.png')
         if not res.exist:
-            res = R.img(f'priconne/unit/icon_unit_{self.id}11.png')
+            res = R.img(f'priconne/blhx/icon_unit_{self.id}11.png')
         if not res.exist:
-            res = R.img(f'priconne/unit/icon_unit_{UNKNOWN}31.png')
+            res = R.img(f'priconne/blhx/icon_unit_{UNKNOWN}31.png')
         return res
 
 
