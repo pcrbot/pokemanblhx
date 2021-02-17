@@ -11,7 +11,7 @@ from hoshino.typing import CommandSession
 from . import _blhx_data
 
 logger = log.new_logger('chara')
-UNKNOWN = 
+UNKNOWN = 2000
 UnavailableChara = {
 }
 
