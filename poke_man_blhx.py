@@ -5,7 +5,8 @@ from PIL import Image, ImageFont, ImageDraw
 
 import hoshino
 from hoshino import Service, util
-from . import chara, _blhx_data
+from . import _blhx_data
+from . import chara
 from hoshino.typing import MessageSegment, NoticeSession, CQEvent
 from . import *
 from ...util import FreqLimiter
@@ -30,7 +31,7 @@ RESET_HOUR = 0                  # 每日戳一戳、赠送等指令使用次数�
 COL_NUM = 17                    # 查看仓库时每行显示的卡片个数
 OMIT_THRESHOLD = 20             # 当获得卡片数超过这个阈值时，不再显示获得卡片的具体名称，只显示获得的各个稀有度的卡片数目
 # 填写不希望被加载的卡片文件名，以逗号分隔。
-BLACKLIST_CARD = ['']
+BLACKLIST_CARD = ['icon_unit_200031.png']
 # 献祭卡片时的获得不同稀有度卡片的概率，-1,0,1表示被献祭卡片的三种稀有度，后面长度为3的列表表示献祭获得卡片三种不同稀有度的概率，要求加和为1
 MIX_PROBABILITY = {str(list((-1, -1))): [0.8, 0.194, 0.006], str(list((-1, 0))): [0.44, 0.5, 0.06], str(list((-1, 1))): [0.55, 0.3, 0.1],
                    str(list((0, 0))): [0.1, 0.8, 0.1],       str(list((0, 1))): [0.3, 0.5, 0.2],      str(list((1, 1))): [0.15, 0.25, 0.6]}
